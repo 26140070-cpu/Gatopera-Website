@@ -6,6 +6,15 @@ interface ParticlesProps {
   count: number;
 }
 
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  alpha: number;
+}
+
 export default function Particles({ count }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -16,8 +25,8 @@ export default function Particles({ count }: ParticlesProps) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId;
-    const particles = [];
+    let animationFrameId: number;
+    const particles: Particle[] = [];
 
     const resize = () => {
       canvas.width = window.innerWidth;
