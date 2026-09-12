@@ -9,14 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0f",
-        "background-purple": "#12121a",
-        "gatopera-purple": "#7c3aed",
-        "gatopera-purple-dark": "#4c1d95",
-        "border-purple": "rgba(124, 58, 237, 0.3)",
+        background: "#050508",
+        "background-card": "rgba(18, 18, 26, 0.6)",
+        "gatopera-purple": "#8b5cf6",
+        "gatopera-purple-dark": "#5b21b6",
+        "accent-blue": "#3b82f6",
+        "border-glow": "rgba(139, 92, 246, 0.4)",
       },
       backgroundImage: {
-        landing: "radial-gradient(ellipse at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(167, 139, 250, 0.08) 0%, transparent 40%), #0a0a0f",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "hero-glow": "conic-gradient(from 180deg at 50% 50%, #2a8af6 0deg, #a853ba 180deg, #e92a67 360deg)",
+      },
+      animation: {
+        "blob": "blob 7s infinite",
+        "text-shimmer": "text-shimmer 2.5s ease-out infinite alternate",
+      },
+      keyframes: {
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        "text-shimmer": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        }
       },
     },
   },

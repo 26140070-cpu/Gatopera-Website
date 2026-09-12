@@ -3,31 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #ffffff;
+  --background: #050508;
+  --foreground: #f8fafc;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.logo-bounce {
-  animation: bounce 3s infinite;
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
 }
 
-.logo-glow {
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes glow {
-  0% { filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.5)); }
-  100% { filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.8)); }
+.glass-panel {
+  background: rgba(18, 18, 26, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
 }

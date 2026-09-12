@@ -1,23 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
 
 export const metadata: Metadata = {
-  title: "Gatopera Client - Minecraft Utility Mod",
-  description: "Gatopera is a free, open-source utility client for Minecraft. Download the latest version with advanced features and full customization.",
-  keywords: ["Minecraft client", "Gatopera Client", "Minecraft utility mod", "free Minecraft client"],
+  title: "Dev Portfolio | @26140070-cpu",
+  description: "Portafolio de desarrollo de software. Explorando Java, Python, C++, y arquitecturas web.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className + " bg-background text-foreground antialiased"}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
       </body>
     </html>
