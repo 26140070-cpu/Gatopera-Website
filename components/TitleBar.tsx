@@ -1,2 +1,0 @@
-import Link from "next/link";
-export default function TitleBar() { return <header className="nav-wrap"><nav className="nav shell" aria-label="Navegación principal"><Link href="/" className="brand" aria-label="Inicio"><span>G/</span><small>26140070<br />CPU.DEV</small></Link><div className="nav-links"><a href="#work">Trabajo</a><a href="#archive">Archivo</a><a href="#stack">Stack</a></div><Link className="nav-github" href="https://github.com/26140070-cpu" target="_blank" rel="noreferrer">GitHub <span>↗</span></Link></nav></header>; }
